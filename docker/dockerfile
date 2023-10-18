@@ -45,7 +45,10 @@ RUN apt-get -o Acquire::ForceIPv4=true update && apt-get -yq dist-upgrade \
         python3-setuptools \
         apt-transport-https \
         libglew-dev \
-        python3-tk
+        python3-tk \
+        tree \
+        less \
+        python3-ipdb
 
 RUN pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools \
@@ -56,7 +59,10 @@ RUN pip3 install --upgrade pip \
         scipy \
         opencv-python \
         dbg \
-        pytransform3d
+        pytransform3d \
+        apriltag \
+        gdown \
+        pytest-profiling
 
 
 RUN apt-get -o Acquire::ForceIPv4=true update && apt-get -yq dist-upgrade \
