@@ -1,1 +1,1 @@
-docker/docker_run.bash
+docker_run.bash

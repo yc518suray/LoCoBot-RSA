@@ -1,1 +1,1 @@
-docker/docker_join.bash
+docker_join.bash
