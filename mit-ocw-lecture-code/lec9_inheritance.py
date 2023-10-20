@@ -8,17 +8,29 @@ class Animal(object):
     attributes: age
     methods: get_age, set_age, get_name, set_name, __str__
     '''
-    def __init__(self, age):
+    def __init__(self, age, name = None):
         self.age = age
-        self.name = None
+        self.name = name
+        self.alive = True
     def get_age(self):
         return self.age
     def get_name(self):
         return self.name
+    def get_alive(self):
+        return self.alive
     def set_age(self, newage):
         self.age = newage
     def set_name(self, newname=""):
         self.name = newname
+    def kill(self, other):
+        if not self.alive:
+            print(f"{self.name} is not alive!")
+        elif not other.alive:
+            print(f"{other.name} cannot be killed\
+                    since it is already dead.")
+        else:
+            other.alive = False
+            
     def __str__(self):
         return "animal:"+str(self.name)+":"+str(self.age)
         
