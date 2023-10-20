@@ -9,7 +9,7 @@ class Coordinate(object):
         self.y = y
     def __str__(self):
         """ Returns a string representation of self """
-        return "<" + str(self.x) + "," + str(self.y) + ">"
+        return "(" + str(self.x) + "," + str(self.y) + ")"
     def distance(self, other):
         """ Returns the euclidean distance between two points """
         x_diff_sq = (self.x-other.x)**2
@@ -100,7 +100,7 @@ class intSet(object):
         try:
             self.vals.remove(e)
         except:
-            raise ValueError(str(e) + ' not found')
+            raise ValueError(str(e) + ' is not in the set!')
 
     def __str__(self):
         """ Returns a string representation of self """

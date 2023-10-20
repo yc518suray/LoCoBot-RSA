@@ -41,5 +41,10 @@ def test_person():
     p1.speak()
     p1.age_diff(p2)
 
-
+def test_kill():
+    a = inh.Cat(4, "Carol")
+    b = inh.Person("Raymond", 22)
+    assert b.alive == True
+    a.kill(b)
+    assert b.alive == False
 
